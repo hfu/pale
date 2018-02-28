@@ -19,9 +19,8 @@ var map = new mapboxgl.Map({
     version: 8,
     sources: {
       pale: {
-        type: 'raster', tileSize: 256,
+        type: 'raster', attribution: 'GSI Tiles (pale)',
         tiles: ['https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'],
-        attribution: 'GSI Tiles (pale)'
       }
     },
     layers: [{
@@ -29,7 +28,7 @@ var map = new mapboxgl.Map({
       minzoom: 0, maxzoom: 18
     }]
   },
-  center: [135, 35], zoom: 2, attributionControl: true, hash: true
+  center: [135, 35], zoom: 5, attributionControl: true, hash: true
 })
 map.addControl(new mapboxgl.NavigationControl())
 </script>
