@@ -20,7 +20,7 @@ var map = new mapboxgl.Map({
         "sources": {
             "raster-tiles": {
                 "type": "raster",
-                "url": "https://hfu.github.io/pale/tile.json",
+                "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"],
                 "tileSize": 256
             }
         },
