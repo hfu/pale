@@ -19,22 +19,19 @@ var map = new mapboxgl.Map({
     version: 8,
     sources: {
       pale: {
-        type: "raster",
-        tiles: ["https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"],
+        type: 'raster',
+        tiles: ['https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'],
         tileSize: 256
       }
     },
     layers: [{
-      id: 'pale',
-      type: "raster",
-      source: 'pale',
-      minzoom: 0,
-      maxzoom: 18
+      id: 'pale', type: 'raster', source: 'pale',
+      minzoom: 0, maxzoom: 18
     }]
   },
-  center: [135, 35], zoom: 2, 
-  attributionControl: true, hash: true
-});
+  center: [135, 35], zoom: 2, attributionControl: true, hash: true
+})
+map.addControl(new mapboxgl.NavigationControl())
 </script>
 </body>
 </html>
