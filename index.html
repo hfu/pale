@@ -19,9 +19,9 @@ var map = new mapboxgl.Map({
     version: 8,
     sources: {
       pale: {
-        type: 'raster',
+        type: 'raster', tileSize: 256,
         tiles: ['https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'],
-        tileSize: 256
+        attribution: 'GSI Tiles (pale)'
       }
     },
     layers: [{
